@@ -5,9 +5,13 @@
     30 31 32 33 34 35 36
     40 41 42 43 44 45 46
     50 51 52 53 54 55 56"""
+rows = 6
+column =7
+
 def print_board(board):
     for row in board:
-        print(" ".join(row)) #.join helps in merging 
+        print("|" + "|".join(row)+ "|") #.join helps in merging 
+        print("-" *(2 * column + 1))
     print()
 #checking winner 
 def check_winner(board, player):
@@ -36,14 +40,12 @@ def check_winner(board, player):
             if all(board[row-i][col+i] == player for i in range(4)):
                 return True 
     return False
-def check_winner(board, player):
-    ..
 
 #check if the board is completely filled 
 def is_full(board):
     return all(piece != ' ' for row in board for piece in row)
 
-def main()
+def main():
     board = [[' ' for _ in range (7)] for _ in range(6)]
     player = 'X' 
 
@@ -73,3 +75,4 @@ def main()
             break
         
     player = 'O' if player == 'X' else 'X'
+main()
