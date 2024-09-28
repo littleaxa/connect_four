@@ -55,6 +55,7 @@ def main():
 
         if column < 0 or column > 6:
             print("the input is not valid!")
+            continue 
         #checking if the column entered by the user is valid or not
         for row in range (5, -1, -1):
             if board[row][column] == ' ':
