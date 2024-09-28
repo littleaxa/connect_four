@@ -75,8 +75,8 @@ def main():
             print("tie!")
             break
         
-        if player =='X':
-            player ='O'
+        if player == 'X':
+            player = 'O'
         else:
-            player ='X'
+            player= 'X'
 main()
