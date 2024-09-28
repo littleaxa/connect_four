@@ -6,12 +6,12 @@
     40 41 42 43 44 45 46
     50 51 52 53 54 55 56"""
 rows = 6
-column =7
+col =7
 
 def print_board(board):
     for row in board:
         print("|" + "|".join(row)+ "|") #.join helps in merging 
-        print("-" *(2 * column + 1))
+        print("-" *(2 * col + 1))
     print()
 #checking winner 
 def check_winner(board, player):
@@ -55,6 +55,7 @@ def main():
 
         if column < 0 or column > 6:
             print("the input is not valid!")
+            continue 
         #checking if the column entered by the user is valid or not
         for row in range (5, -1, -1):
             if board[row][column] == ' ':
@@ -74,5 +75,8 @@ def main():
             print("tie!")
             break
         
-    player = 'O' if player == 'X' else 'X'
+        if player == 'X':
+            player = 'O'
+        else:
+            player= 'X'
 main()
