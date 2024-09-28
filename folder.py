@@ -8,10 +8,13 @@
 rows = 6
 col =7
 
+
+
 def print_board(board):
     for row in board:
         print("|" + "|".join(row)+ "|") #.join helps in merging 
         print("-" *(2 * col + 1))
+
     print()
 #checking winner 
 def check_winner(board, player):
@@ -73,7 +76,7 @@ def main():
             print_board(board)
             print("tie!")
             break
-        
+
         if player =='X':
             player ='O'
         else:
